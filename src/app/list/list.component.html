@@ -1,0 +1,29 @@
+<h1>Spieleliste!</h1>
+<table class="table">
+  <thead class="thead-dark">
+  <th>
+    ID
+  </th>
+  <th>
+    Bezeichnung
+  </th>
+  <th>
+    Genre
+  </th>
+  <th>
+    FSK
+  </th>
+  <th>
+    Löschen
+  </th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let game of games" (click)="alert(game)">
+    <td>{{game.id}}</td>
+    <td>{{game.bezeichnung}}</td>
+    <td>{{game.genre}}</td>
+    <td>{{game.fsk}}</td>
+    <button type="button" class="btn btn-danger" (click)="del(game)">löschen</button>
+  </tr>
+</tbody>
+</table>
